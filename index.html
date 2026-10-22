@@ -7,6 +7,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
   <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify@5/dist/themes/core.min.css">
   <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify@5/dist/themes/addons/vue.min.css">
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/katex@0.16.22/dist/katex.min.css">
 </head>
 <body>
   <div id="app"></div>
@@ -15,9 +16,25 @@
       name: 'Fichas',
       repo: '',
       loadSidebar: true,
-      subMaxLevel: 2
+      subMaxLevel: 2,
+      plugins: [
+        // Renderiza $...$ y $$...$$ con KaTeX antes de que marked toque el markdown; \$ queda como dólar literal.
+        // ponytail: no distingue bloques de código; si alguno lleva $, escaparlo como \$
+        function (hook) {
+          hook.beforeEach(function (md) {
+            return md
+              .replace(/\$\$([\s\S]+?)\$\$/g, function (_, tex) {
+                return katex.renderToString(tex, { displayMode: true, throwOnError: false });
+              })
+              .replace(/(?<!\\)\$(.+?)(?<!\\)\$/g, function (_, tex) {
+                return katex.renderToString(tex, { throwOnError: false });
+              });
+          });
+        }
+      ]
     }
   </script>
+  <script src="//cdn.jsdelivr.net/npm/katex@0.16.22/dist/katex.min.js"></script>
   <!-- Docsify resource -->
   <script src="//cdn.jsdelivr.net/npm/docsify@5"></script>
 </body>
