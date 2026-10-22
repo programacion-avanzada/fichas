@@ -1,0 +1,7 @@
+{
+  "globs": ["**/*.md"],
+  "ignores": ["node_modules", "_sidebar.md"],
+  "config": {
+    "MD013": false
+  }
+}
