@@ -1,7 +1,7 @@
 .PHONY: serve deploy lint
 
 serve:
-	docsify serve .
+	docsify serve . --port 3001
 
 deploy:
 	git push
