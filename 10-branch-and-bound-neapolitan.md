@@ -6,7 +6,7 @@
 
 ## 1. ¿Para qué otra técnica más?
 
-El capítulo arranca con un personaje ya conocido: el ladrón de la mochila 0-1. Tiene dos algoritmos, programación dinámica (Sección 4.5) y backtracking (Sección 5.7), pero los dos son exponenciales en el peor caso, así que para su instancia podrían tardar años. En la Sección 6.2 vuelve Nancy, la vendedora del problema del viajante. Resolvió 20 ciudades con programación dinámica, pero con 40 ciudades tardaría más de seis años, así que se conformó con encontrar *cualquier* tour, que puede ser muy malo.
+El capítulo comienza con un personaje ya conocido: el ladrón de la mochila 0-1. Tiene dos algoritmos, programación dinámica (Sección 4.5) y backtracking (Sección 5.7), pero los dos son exponenciales en el peor caso, así que para su instancia podrían tardar años. En la Sección 6.2 vuelve Nancy, la vendedora del problema del viajante. Resolvió 20 ciudades con programación dinámica, pero con 40 ciudades tardaría más de seis años, así que se conformó con encontrar *cualquier* tour, que puede ser muy malo.
 
 Branch-and-bound les ofrece otra opción: en el peor caso sigue siendo exponencial, pero en muchas instancias grandes puede ser muy eficiente.
 
@@ -62,6 +62,3 @@ Hay otras cotas posibles, pero calcular varias no siempre compensa: lo que impor
 2. **Sección 6.1.1:** anchura con poda; Ejemplo 6.1, Fig. 6.2 y Algoritmo 6.1.
 3. **Sección 6.1.2:** primero-el-mejor; el Ejemplo 6.2 completo, Fig. 6.3 y Algoritmo 6.2.
 4. **Sección 6.2:** el viajante; cómo se calcula la cota en nodos internos, Ejemplo 6.3, Fig. 6.6 y Algoritmo 6.3.
-
----
-*Referencias por número de sección, ejemplo, figura y algoritmo.*
