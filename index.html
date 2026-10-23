@@ -18,8 +18,6 @@
       loadSidebar: true,
       subMaxLevel: 2,
       plugins: [
-        // Renderiza $...$ y $$...$$ con KaTeX antes de que marked toque el markdown; \$ queda como dólar literal.
-        // ponytail: no distingue bloques de código; si alguno lleva $, escaparlo como \$
         function (hook) {
           hook.beforeEach(function (md) {
             return md
