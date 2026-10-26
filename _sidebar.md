@@ -1,3 +1,4 @@
 - [Inicio](/)
-- [Branch-and-Bound - Neapolitan (2015)](10-branch-and-bound-neapolitan.md)
-- [Programación Dinámica - Neapolitan (2015)](11-dynamic-programming-neapolitan.md)
+- Neapolitan, Foundations of Algorithms (2015)
+  - [Branch-and-Bound](10-branch-and-bound-neapolitan.md)
+  - [Programación Dinámica](11-dynamic-programming-neapolitan.md)

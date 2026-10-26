@@ -11,7 +11,6 @@
 
 - Mostrar como tabla markdown el triángulo de Pascal (la tabla `B`) del Ejemplo 3.1, en la ficha de programación dinámica.
 - Dibujar los árboles de espacio de estados de branch-and-bound con Mermaid (hay plugin para docsify), aunque sea un árbol chico.
-- Agrupar el sidebar por libro o por unidad cuando haya fichas de otros libros.
 
 ## Para más adelante
 
