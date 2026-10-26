@@ -1,2 +1,2 @@
 #!/bin/sh
-exec make lint
+git diff --cached --name-only --diff-filter=ACMR -z -- '*.md' | xargs -0r npx --yes markdownlint-cli2 --no-globs
