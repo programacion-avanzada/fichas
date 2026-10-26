@@ -1,4 +1,4 @@
-.PHONY: help serve open deploy lint
+.PHONY: help serve open deploy lint setup
 
 help: ## Muestra esta ayuda
 	@grep -E '^[a-z]+:.*## ' $(MAKEFILE_LIST) | awk -F ':.*## ' '{printf "  %-8s %s\n", $$1, $$2}'
@@ -14,3 +14,6 @@ deploy: ## Pushea a remoto
 
 lint: ## Corre markdownlint sobre los .md
 	npx --yes markdownlint-cli2
+
+setup: ## Prepara el repo (activa el pre-commit que corre el lint)
+	git config core.hooksPath .githooks
